@@ -18,14 +18,15 @@
         android:layout_marginTop="64dp"
         android:src="@drawable/bulb_off" />
 
-    <Button
-        android:layout_width="200dp"
+    <ToggleButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OFF"
+        android:text="New ToggleButton"
         android:id="@+id/btnSwitch"
         android:onClick="switchThis"
         android:layout_below="@+id/imgThis"
-        android:layout_alignRight="@+id/imgThis"
-        android:layout_alignEnd="@+id/imgThis"
-        android:layout_marginTop="42dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:checked="false" />
+
 </RelativeLayout>

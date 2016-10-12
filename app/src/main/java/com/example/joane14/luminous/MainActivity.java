@@ -7,34 +7,33 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView image;
-    Boolean seen=false;
-    Button text ;
+    Boolean seen=true;
+    ToggleButton text ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text= (Button) findViewById(R.id.btnSwitch);
+        text= (ToggleButton) findViewById(R.id.btnSwitch);
     }
 
     public void switchThis(View view){
 
         image = (ImageView) findViewById(R.id.imgThis);
 
-        if(seen==false){
-            text.setText("ON!");
-            seen=true;
+        if(seen==true){
+            seen=false;
             image.setImageResource(R.drawable.bulb_on);
         }
-        else if(seen==true){
-            text.setText("OFF!");
-            seen=false;
+        else if(seen==false){
+            seen=true;
             image.setImageResource(R.drawable.bulb_off);
         }
 
